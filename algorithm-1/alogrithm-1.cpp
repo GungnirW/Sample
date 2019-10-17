@@ -43,16 +43,19 @@ int  MaxSequence2(int *iArr,int n){
 
 
 int main(){
-    /* int a[] = {-1,-2,4,9,-5,-1,6,1,-3};
+    
+	int a[] = {-1,-2,4,9,-5,-1,6,1,-3};
     int n = sizeof(a)/sizeof(a[0]); 
      
     cout<<MaxSequence2(a,n)<<endl;
-    //cout<<a[2]<<endl; */
+    //cout<<a[2]<<endl; 
+	/* test the process
     int **c;
     c = new int*[3];
     for(int i=0;i<3;i++){
         c[i] = new int[2]{i,i+1};
     }
+	*/
     system("pause");
     return 0;    
 } 
