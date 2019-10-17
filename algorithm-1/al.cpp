@@ -1,31 +1,64 @@
 #include<iostream>
 #include<algorithm>
 using namespace std;
-/* 描述
-老师布置给小华一个题目.
-这道题是这样的,首先给出n个在横坐标上的点,然后连续的用半圆连接他们:首先连接第一个点与第二点(以第一个点和第二点作为半圆的直径).然后连接第二个第三个点.
-直到第n个点.现在需要判定这些半圆是否相交了,在端点处相交不算半圆相交.
-输入
-输入的第一行包含一个整数T(1 ≤ T ≤ 10)表示有T组样例.
-每组样例的第一行是一个整数n(1 ≤ n ≤ 1000).
-接下来的一行输入有n个用空格隔开的不同的整数.a1,a2,...,an(-1000000 ≤ ai ≤ 1000000),(ai,0)表示第i个点在横坐标的位置.输出
-对于每个输入文件,输出T行.
-每行输出"yes"表示这些半圆有相交或者"no".样例输入
-2
-4
-0 10 5 15
-4
-0 15 5 10样例输出
-yes
-no */
 
-int main()
-{
-    int *arra;
-    int n;
-    cin>>n;
-    arra = new int[n];
-    for(int i=0;i < n;i++)
-        cin>> arra[i];
-    return 0;
+
+//6-1
+bool bPrimenum(int p){  //判断输入数字是否为素数
+    if(p == 2||p ==3)
+        return true;
+    if(p%6 != 1 && p%6 != 5)
+        return false;
+    int imas_p = sqrt(p);
+    for(int i = 5;i <= imas_p;i+=6)
+        if(p%i == 0||p%(i+2) == 0)
+            return false;
+    return true;
 }
+bool bProblem6_1(int a){    //立方和质数
+    int imas_a = sqrt(a);
+    int i = 2;
+    int prim;
+    int iArr[500] = {0};
+    iArr[0] = 2;
+    iArr[1] = 3;
+    for(int n = 5;n < a/2;n++){//记录从2到a的素数到iArr
+        if(bPrimenum(n)){
+            iArr[i] = n;
+            i++;
+        }
+    }
+    if(a%2 == 0){
+        for(int im = 1;im < i;im++){
+            if(prim = a-2-iArr[im])
+                if(prim!=iArr[im]&&bPrimenum(prim))
+                    return true;
+        }
+        return false;
+    }
+    else{
+        for(int is = 1;is < i;is++){
+            for(int ip = is+1;ip < i;ip++){
+                if(prim = a-iArr[is]-iArr[ip])
+                    if(prim!=iArr[is]&&prim!=iArr[ip]&&bPrimenum(prim))
+                        return true;
+            }
+        }
+        return false;
+    }
+}
+
+ int main(){
+    int a;
+    cin>>a;
+    if(bPrimenum(a)){
+        if(bProblem6_1(a))
+            cout<<"Yes"<<endl;
+        else
+            cout<<"No"<<endl;
+    }
+    else
+        cout<<"No"<<endl;
+    system("pause"); 
+    return 0;
+ }
