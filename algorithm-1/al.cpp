@@ -125,6 +125,6 @@ bool bProblem6_1(int a){    //立方和质数
     }
     else
         cout<<"No"<<endl;
-    system("pause"); 
+    //system("pause"); 
     return 0;
  }
