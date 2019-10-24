@@ -266,7 +266,7 @@ int main(){
     return 0;
 }
 */
-int count1 = 1;
+/* int count1 = 1;
 int n;
 void Puttinginto(int icase[],int l,int i){
     if(i<n){
@@ -287,4 +287,4 @@ int main(){
     cout<<count1<<endl;
     system("pause");
     return 0;
-}
+} */
