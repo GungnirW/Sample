@@ -35,7 +35,7 @@ int main()
 
 using namespace std;
 
-/*bool primenum(int p){
+bool primenum(int p){
     for(int i=2;i <= sqrt(p);i++)
         if(p%i == 0)
             return false;
@@ -101,7 +101,7 @@ bool bProblem6_1(int a){    //立方和质数
     system("pause"); 
     return 0;
  }
- */
+
 /*for(int i=0;i<n;i++){
         for(int j=i+1;j<n;j++){
             iplus = a[i]+a[j];
