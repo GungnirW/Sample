@@ -5,7 +5,7 @@ int Max(int a,int b){
     return a > b?a:b;
 }
 
-int MaxSequence3(int *iArr,int n){
+/*int MaxSequence3(int *iArr,int n){
     int imax = 0;
     for(int length =1;length <= n;length++){
         for(int i = 0;i < n-length+1;i++){
@@ -20,7 +20,7 @@ int MaxSequence3(int *iArr,int n){
         }
     } 
     return imax;
-}
+}*/
 int  MaxSequence2(int *iArr,int n){
     int imax = 0;    
     int *current = new int[n];
