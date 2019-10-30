@@ -8,7 +8,7 @@ bool primenum(int p){
             return false;
     return true;
 }
-6-1
+//6-1
 bool bPrimenum(int p){  //判断输入数字是否为素数
     if(p == 2||p ==3)
         return true;
