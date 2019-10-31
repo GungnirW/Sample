@@ -48,14 +48,14 @@ int main(){
     int n = sizeof(a)/sizeof(a[0]); 
      
     cout<<MaxSequence2(a,n)<<endl;
-    //cout<<a[2]<<endl; 
-	/* test the process
+    /*cout<<a[2]<<endl; 
+	 test the process
     int **c;
     c = new int*[3];
     for(int i=0;i<3;i++){
         c[i] = new int[2]{i,i+1};
     }
 	*/
-    system("pause");
+    //system("pause");
     return 0;    
 } 
