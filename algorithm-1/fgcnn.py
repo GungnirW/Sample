@@ -17,12 +17,7 @@ from tensorflow.python.keras.regularizers import l2
 from .layers.sequence import SequencePoolingLayer
 from .layers.utils import Hash,concat_fun,Linear
 
-# 输入:feature_columns
-# 输出：
-# 
-# 
-#
-# 
+
 def build_input_features(feature_columns, include_varlen=True, mask_zero=True, prefix='',include_fixlen=True):
     input_features = OrderedDict()
     if include_fixlen:
